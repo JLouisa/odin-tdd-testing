@@ -31,21 +31,35 @@
 // console.log(calculator(3, 3).sub());
 // console.log(calculator(3, 3).div());
 
-function caesarCipher(shift, str) {
-  let newWord = [];
-  let num;
-  str.split("").forEach((letter) => {
-    if (letter.charCodeAt(0) + shift > 122) {
-      num = letter.charCodeAt(0) + shift - 122 + 96;
-    } else {
-      num = letter.charCodeAt(0) + shift;
-    }
-    newWord.push(String.fromCharCode(num));
-    console.log(newWord.join(""));
-  });
-  return newWord.join("");
+// function caesarCipher(shift, str) {
+//   let newWord = [];
+//   let num;
+//   str.split("").forEach((letter) => {
+//     if (letter.charCodeAt(0) + shift > 122) {
+//       num = letter.charCodeAt(0) + shift - 122 + 96;
+//     } else {
+//       num = letter.charCodeAt(0) + shift;
+//     }
+//     newWord.push(String.fromCharCode(num));
+//     console.log(newWord.join(""));
+//   });
+//   return newWord.join("");
+// }
+// module.exports = caesarCipher;
+
+function analyzeArray(arr) {
+  return [
+    {
+      average: arr.reduce((sum, next) => sum + next, 0) / arr.length,
+      min: Math.min(...arr),
+      max: Math.max(...arr),
+      length: arr.length,
+    },
+  ];
 }
 
-console.log(caesarCipher(2, "z"));
+let array = [1, 2, 3, 4, 5];
 
-module.exports = caesarCipher;
+console.log(analyzeArray(array));
+
+module.exports = analyzeArray;

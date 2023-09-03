@@ -1,7 +1,8 @@
 // const capitalize = require("./javascript.js");
 // const reverseString = require("./javascript.js");
 // const calculator = require("./javascript.js");
-const caesarCipher = require("./javascript.js");
+// const caesarCipher = require("./javascript.js");
+const analyzeArray = require("./javascript.js");
 
 // test("String start Capitalized", () => {
 //   expect(capitalize("start")).toMatch("Start");
@@ -59,18 +60,22 @@ const caesarCipher = require("./javascript.js");
 //   expect(calculator(4, 4).div()).toBe(1);
 // });
 
-test("CaesarCipher strings", () => {
-  expect(caesarCipher(1, "abcd")).toMatch("bcde");
-});
+// test("CaesarCipher strings", () => {
+//   expect(caesarCipher(1, "abcd")).toMatch("bcde");
+// });
 
-test("CaesarCipher strings", () => {
-  expect(caesarCipher(1, "z")).toMatch("a");
-});
+// test("CaesarCipher strings", () => {
+//   expect(caesarCipher(1, "z")).toMatch("a");
+// });
 
-test("CaesarCipher strings", () => {
-  expect(caesarCipher(1, "zakm")).toMatch("abln");
-});
+// test("CaesarCipher strings", () => {
+//   expect(caesarCipher(1, "zakm")).toMatch("abln");
+// });
 
-test("CaesarCipher strings", () => {
-  expect(caesarCipher(4, "wxyz")).toMatch("abcd");
+// test("CaesarCipher strings", () => {
+//   expect(caesarCipher(4, "wxyz")).toMatch("abcd");
+// });
+
+test("analyzeArray strings", () => {
+  expect(analyzeArray([1, 2, 3, 4, 5])).toMatchObject([{ average: 3, min: 1, max: 5, length: 5 }]);
 });
